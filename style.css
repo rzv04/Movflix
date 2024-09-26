@@ -262,7 +262,7 @@ body {
 .hero-text-box {
   max-width: 30%;
   position: absolute;
-  bottom: 65%;
+  bottom: 85%;
   left: 5%;
   color: #f8f9fa;
   display: flex;
@@ -327,7 +327,7 @@ body {
   line-height: 1.8;
 }
 
-/* Sponsor Company Movies Section*/
+/* Sponsor Company Movies Carousel Section*/
 .company-movies-section {
   height: 100vh;
 }
@@ -353,7 +353,11 @@ body {
   background-color: #e03131;
   position: absolute;
 }
-
+.chevron-left,
+.chevron-right {
+  height: 1rem;
+  width: 1rem;
+}
 #carousel-btn-left {
   left: 0;
   transform: translateX(-60%);
@@ -379,8 +383,37 @@ body {
 }
 
 /* Testimonials section */
+.testimonials-section {
+  /* height: 100vh; */
+}
+.testimonials-grid {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.testimonial-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 3.2rem;
+  border: 2px solid white;
+}
+.star {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.testimonial-text {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
 
-
+.testimonial-person-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.testimonial-photo {
+  grid-row: 1 / span 2;
+}
 /* Type Scale System
 Scale 0.5: 8 px (0.8 rem)
 
@@ -404,7 +437,8 @@ gray:#212529
 white:#fff
 accent:#e03131;
 
-gaps:.mb--sm {
+Gaps:
+.mb--sm {
   margin-bottom: 4.8rem;
 }
 
