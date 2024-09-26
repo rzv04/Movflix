@@ -31,7 +31,9 @@ body {
 .mb--large {
   margin-bottom: 10.4rem;
 }
-
+.mb--xl {
+  margin-bottom: 12.2rem;
+}
 .mt--sm {
   margin-top: 4.8rem;
 }
@@ -355,8 +357,7 @@ body {
 }
 .chevron-left,
 .chevron-right {
-  height: 1rem;
-  width: 1rem;
+  transform: scale(1.5);
 }
 #carousel-btn-left {
   left: 0;
@@ -413,6 +414,31 @@ body {
 }
 .testimonial-photo {
   grid-row: 1 / span 2;
+}
+
+/* Footer Section */
+.footer {
+  gap: 2.4rem;
+  background-color: white;
+  font-size: 1.6rem;
+}
+.footer-logo {
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.8rem;
+  width: 100%;
+}
+.footer-nav-list,
+.footer-policies {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+hr {
+  /* flex: 0; */
+  width: 100%;
 }
 /* Type Scale System
 Scale 0.5: 8 px (0.8 rem)
