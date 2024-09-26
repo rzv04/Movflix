@@ -4,12 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Full Menu</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="header-inner">
-        <img src="" alt="LOGO" />
+        <img src="test.png" alt="LOGO" height="24" width="24" />
         <div class="menu-btn">
           <ion-icon name="menu-outline" class="menu-icon-open"></ion-icon>
           <!-- <ion-icon name="close-outline" class="menu-icon-close"></ion-icon> -->
@@ -32,6 +44,34 @@
       <div class="line"></div>
     </div>
 
+    <menu class="menu">
+      <div class="main-menu">
+        <ul class="main-menu-list">
+          <div class="main-menu-item-wrapper">
+            <li class="main-menu-item">Work</li>
+          </div>
+          <div class="main-menu-item-wrapper">
+            <li class="main-menu-item">Studio</li>
+          </div>
+          <div class="main-menu-item-wrapper">
+            <li class="main-menu-item">Team</li>
+          </div>
+          <div class="main-menu-item-wrapper">
+            <li class="main-menu-item">Contact</li>
+          </div>
+        </ul>
+      </div>
+
+      <div class="sub-menu">
+        <ul class="sub-menu-list">
+          <p class="sub-menu-heading">Socials</p>
+          <li class="sub-menu-item">LinkedIn</li>
+          <li class="sub-menu-item">Instagram</li>
+          <li class="sub-menu-item">Twitter</li>
+        </ul>
+      </div>
+    </menu>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -40,6 +80,20 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <div class="page open">
+      <section class="hero-section container">
+        <img
+          src="img/snowpiercer.png"
+          alt="Hero Movie Image"
+          class="hero-img"
+        />
+
+        <div class="hero-text-box">
+            <div></div>
+        </div>
+      </section>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
