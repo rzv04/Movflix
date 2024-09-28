@@ -21,13 +21,13 @@
   <body class="body">
     <header class="header">
       <div class="header-inner">
-        <img
+        <!-- <img
           src="test.png"
           alt="LOGO"
           height="24"
           width="24"
           class="header-logo"
-        />
+        /> -->
         <div class="menu-btn">
           <ion-icon name="menu-outline" class="menu-icon-open"></ion-icon>
           <!-- <ion-icon name="close-outline" class="menu-icon-close"></ion-icon> -->
@@ -89,11 +89,13 @@
 
     <div class="page open">
       <section class="hero-section">
-        <img
-          src="img/snowpiercer.png"
-          alt="Hero Movie Image"
-          class="hero-img"
-        />
+        <div class="hero-img-wrapper">
+          <img
+            src="img/snowpiercer.png"
+            alt="Hero Movie Image"
+            class="hero-img"
+          />
+        </div>
 
         <div class="hero-text-box">
           <h1 class="hero-text-heading">Snowpiercer</h1>
@@ -104,14 +106,16 @@
             quidem tempore est mollitia.
           </p>
           <div class="btn-wrapper">
-            <a href="#" class="btn btn--primary btn--large">Watch now &rarr;</a>
+            <a href="#" class="btn btn--primary btn--large watch-btn"
+              >Watch now <ion-icon name="play"></ion-icon
+            ></a>
             <a href="#" class="btn btn--secondary btn--large">Details</a>
           </div>
         </div>
       </section>
 
       <section class="gallery-section container">
-        <h2 class="gallery-heading">Trending Movies</h2>
+        <h2 class="gallery-heading">Trending Shows</h2>
         <div class="movie-section mb--sm container">
           <img src="img/fightClub.png" alt="Movie Image" class="movie-img" />
           <img src="img/angryMen.png" alt="Movie Image" class="movie-img" />
@@ -119,13 +123,6 @@
           <img src="img/fightClub.png" alt="Movie Image" class="movie-img" />
           <img src="img/forrest.png" alt="Movie Image" class="movie-img" />
           <img src="img/godfather.png" alt="Movie Image" class="movie-img" />
-        </div>
-        <div class="filter-btn-wrapper">
-          <a href="#" class="filter-btn btn btn--large">Popular</a>
-          <a href="#" class="filter-btn btn btn--large">Comedy</a>
-          <a href="#" class="filter-btn btn btn--large">Action</a>
-          <a href="#" class="filter-btn btn btn--large">Romance</a>
-          <a href="#" class="filter-btn btn btn--large">Popular</a>
         </div>
 
         <div class="movie-section mb--sm container">
@@ -135,6 +132,14 @@
           <img src="img/LOTR3.png" alt="Movie Image" class="movie-img" />
           <img src="img/pulpFiction.png" alt="Movie Image" class="movie-img" />
           <img src="img/schindler.png" alt="Movie Image" class="movie-img" />
+        </div>
+
+        <div class="filter-btn-wrapper">
+          <a href="#" class="filter-btn btn btn--md">Popular</a>
+          <a href="#" class="filter-btn btn btn--md">Comedy</a>
+          <a href="#" class="filter-btn btn btn--md">Action</a>
+          <a href="#" class="filter-btn btn btn--md">Romance</a>
+          <a href="#" class="filter-btn btn btn--md">Popular</a>
         </div>
       </section>
 
@@ -151,7 +156,7 @@
         /> -->
         <div class="cta-text-box">
           <h2 class="cta-hero-heading section-heading">
-            Your best movies are here.
+            Your best shows are here.
           </h2>
           <p class="cta-hero-text">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
@@ -168,12 +173,31 @@
 
       <section class="company-movies-section flex-center-col">
         <h2 class="company-movies-heading section-heading mb--sm">
-          Movies from our best
+          Shows from our best
         </h2>
 
-        <figure class="movie-carousel flex-center-col">
-          <img src="" alt="Image of movie from National Geographic" />
+        <figure class="movie-carousel">
+          <!-- <img src="" alt="Image of movie from National Geographic" /> -->
+          <div class="carousel-item">
+            <video class="carousel-video" autoplay loop muted>
+              <source
+                src="video/5659532-sd_640_360_30fps.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
+          <div class="carousel-item">
+            <video class="carousel-video" autoplay loop muted>
+              <source
+                src="video/4606793-sd_640_360_24fps.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- 
           <button class="carousel-btn" id="carousel-btn-left">
             <ion-icon
               name="chevron-back-outline"
@@ -186,7 +210,7 @@
               name="chevron-forward-outline"
               class="chevron-right"
             ></ion-icon>
-          </button>
+          </button> -->
 
           <div class="dot-btn-wrapper mb--sm">
             <button class="dot-btn"></button>
@@ -220,7 +244,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/1.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -242,7 +266,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/2.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -264,7 +288,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/3.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -286,7 +310,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/4.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -308,7 +332,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/5.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -330,7 +354,7 @@
             </blockquote>
             <div class="testimonial-person-wrapper">
               <img
-                src=""
+                src="img/testimonials/6.jpg"
                 alt="Testimonial photo of a customer"
                 class="testimonial-photo"
               />
@@ -360,8 +384,8 @@
           </ul>
         </nav>
         <!-- border -->
-        <hr />
-        <div class="footer-bottom mt--sm">
+        <!-- <hr /> -->
+        <div class="footer-bottom">
           <p class="copyright">&copy; 2024 MovFlix. All rights reserved.</p>
           <ul class="footer-policies">
             <li class="footer-policy">

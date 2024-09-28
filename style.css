@@ -17,11 +17,20 @@ html {
 a:link,
 a:visited {
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 body {
   /* 1 rem = 10px */
   /* overflow-y: hidden; */
-  background-color: #212529;
+  background-color: #0d1117;
+  background-image: linear-gradient(
+    180deg,
+    rgba(13, 17, 23, 1) 30%,
+    rgba(141, 37, 39, 0.079) 74%,
+    rgba(170, 41, 41, 0.074) 85%,
+    rgba(224, 49, 49, 0.079) 100%
+  );
 }
 .mb--sm {
   margin-bottom: 4.8rem;
@@ -58,6 +67,7 @@ body {
   font-size: 7.2rem;
   line-height: 1.1;
   letter-spacing: -1px;
+  color: #f8f9fa;
 }
 .page {
   animation-duration: 0.45s;
@@ -76,7 +86,7 @@ body {
 .btn {
   text-decoration: none;
   color: #212529;
-  background-color: #fff;
+  background-color: #f8f9fa;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -86,7 +96,25 @@ body {
   color: #212529;
   padding: 1.6rem 2.4rem;
   font-size: 1.6rem;
-  background-color: #fff;
+  background-color: #f8f9fa;
+  border-radius: 100px;
+}
+.btn--secondary {
+  background-color: #343a40;
+  color: #f8f9fa;
+  background-image: linear-gradient(
+    to right,
+    #343a40,
+    rgba(248, 249, 250, 0.085)
+  );
+}
+
+.btn--md {
+  text-decoration: none;
+  color: #212529;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  background-color: #f8f9fa;
   border-radius: 100px;
 }
 @keyframes slide-up {
@@ -137,9 +165,9 @@ body {
 }
 
 .menu-icon-open {
-  height: 3rem;
-  width: 3rem;
-  color: white;
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #f8f9fa;
 }
 
 .header-inner {
@@ -147,7 +175,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border: 1px dashed white;
+  /* border: 1px dashed #f8f9fa; */
   border-radius: 10px;
   /* overflow: hidden; */
 }
@@ -159,6 +187,7 @@ body {
 
 .menu-btn {
   cursor: pointer;
+  margin-left: auto;
 }
 
 /* Header lines overlay */
@@ -191,7 +220,7 @@ body {
 /* Menu overlay */
 .menu {
   position: fixed;
-  color: white;
+  color: #f8f9fa;
   /* color: black; */
   top: 50%;
   left: 50%;
@@ -253,26 +282,46 @@ body {
 
 /* Hero section */
 .hero-section {
-  height: 100vh;
-  /* margin-bottom: 5.6rem; */
+  height: 90vh;
 }
 
 .hero-img {
   width: 100%;
   height: 90%;
-  filter: brightness(80%);
+  /* filter: brightness(80%); */
   position: relative;
 }
 
+.hero-img-wrapper {
+  position: relative;
+}
+.hero-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    242deg,
+    rgba(255, 255, 255, 0.022373915386467047) 30%,
+    rgba(0, 1, 1, 0.887920133873862) 100%
+  );
+  z-index: 1; /* Ensure the gradient is on top of the image */
+  pointer-events: none; /* Allow clicks to pass through the gradient */
+}
 .hero-text-box {
   max-width: 30%;
   position: absolute;
-  bottom: 85%;
+  bottom: 88%;
   left: 5%;
   color: #f8f9fa;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  z-index: 2;
 }
 
 .hero-text-heading {
@@ -286,7 +335,10 @@ body {
   display: flex;
   gap: 1.6rem;
 }
-
+.watch-btn {
+  display: flex;
+  gap: 0.6rem;
+}
 /* Movies(shows) gallery section */
 .gallery-section {
   display: flex;
@@ -301,7 +353,7 @@ body {
 }
 .gallery-heading {
   font-size: 2.4rem;
-  color: white;
+  color: #f8f9fa;
   font-weight: 500;
 }
 .movie-img {
@@ -324,6 +376,7 @@ body {
 .cta-hero-section {
   background-image: url("img/cta.png");
   height: 100vh;
+  background-size: cover;
   /* filter: brightness(50%); */
 }
 .cta-text-box {
@@ -337,10 +390,12 @@ body {
   font-size: 7.2rem;
   line-height: 1.1;
   letter-spacing: -1px;
+  color: #f8f9fa;
 }
 .cta-hero-text {
   font-size: 1.6rem;
   line-height: 1.8;
+  color: #f8f9fa;
 }
 
 /* Sponsor Company Movies Carousel Section*/
@@ -348,13 +403,31 @@ body {
   height: 100vh;
 }
 .movie-carousel {
+  max-width: 925px;
+}
+.movie-carousel {
   position: relative;
   width: 80vw;
   height: 60vh;
-  border: 3px solid white;
+  border: 3px solid #f8f9fa;
   border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.carousel-item {
+  position: absolute;
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .movie-card-bottom-box {
   margin-top: auto;
 }
@@ -389,6 +462,8 @@ body {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
 .dot-btn {
@@ -400,6 +475,14 @@ body {
 /* Testimonials section */
 .testimonials-section {
   /* height: 100vh; */
+  background-image: radial-gradient(
+    105.31% 96.44% at 50% 100.18%,
+    rgba(22, 27, 34, 0.64) 0%,
+    #161b22 100%
+  );
+  color: #8b949e;
+  border-radius: 10px;
+  padding: 4.8rem;
 }
 .testimonials-grid {
   display: grid;
@@ -409,9 +492,13 @@ body {
 .testimonial-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.6rem;
   padding: 3.2rem;
-  border: 2px solid white;
+  border: 2px solid #f8f9fa6a;
+  border-radius: 10px;
+}
+.stars-wrapper {
+  margin-bottom: 2rem;
 }
 .star {
   height: 2.4rem;
@@ -425,16 +512,23 @@ body {
 
 .testimonial-person-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  justify-items: start;
 }
 .testimonial-photo {
   grid-row: 1 / span 2;
+  height: 5.6rem;
+  width: 5.6rem;
+
+  border-radius: 50%;
 }
 
 /* Footer Section */
 .footer {
+  padding: 1.6rem;
   gap: 2.4rem;
-  background-color: white;
+  /* background-color: #f8f9fa; */
   font-size: 1.6rem;
 }
 .footer-logo {
@@ -444,6 +538,11 @@ body {
   justify-content: space-between;
   gap: 4.8rem;
   width: 100%;
+  border-top: 1px solid #f8f9fa6a;
+  padding-top: 5.6rem;
+}
+.footer-nav {
+  flex-shrink: 0;
 }
 .footer-nav-list,
 .footer-policies {
@@ -451,9 +550,19 @@ body {
   display: flex;
   gap: 2.4rem;
 }
+.footer-nav-item a {
+  color: #f8f9fa6a;
+}
+.footer-policies a {
+  color: #f8f9fa6a;
+}
 hr {
   /* flex: 0; */
   width: 100%;
+  /* color: blue; */
+}
+.copyright {
+  color: #f8f9fa6a;
 }
 /* Type Scale System
 Scale 0.5: 8 px (0.8 rem)
@@ -474,9 +583,11 @@ Scale 6.5: 104 px (10.4 rem)
 Scale 7: 112 px (11.2 rem)
 
 Colors:
-gray:#212529
-white:#fff
+gray:#212529 #8b949e
+black:#0d1117;
+white:##f8f9fa
 accent:#e03131;
+black box:radial-gradient(105.31% 96.44% at 50% 100.18%, rgba(22, 27, 34, 0.64) 0%, #161B22 100%)
 
 Gaps:
 .mb--sm {

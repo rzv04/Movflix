@@ -21,3 +21,15 @@ menuBtn.addEventListener("click", () => {
 lines.forEach(
   (line, index) => (line.style.transition = `all ${lineDelays[index]}s ease-in`)
 );
+
+let currentIndex = 0;
+const items = document.querySelectorAll(".carousel-item");
+
+function showNext() {
+  items[currentIndex].style.transform = "translateX(-100%)"; // Slide out current
+  currentIndex = (currentIndex + 1) % items.length; // Update index
+  items[currentIndex].style.transform = "translateX(0)"; // Slide in next
+}
+
+// Set interval for automatic sliding
+setInterval(showNext, 3000); // Change every 3 seconds
