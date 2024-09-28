@@ -31,6 +31,7 @@ body {
     rgba(170, 41, 41, 0.074) 85%,
     rgba(224, 49, 49, 0.079) 100%
   );
+  transition: all 1s linear;
 }
 .mb--sm {
   margin-bottom: 4.8rem;
@@ -102,11 +103,6 @@ body {
 .btn--secondary {
   background-color: #343a40;
   color: #f8f9fa;
-  background-image: linear-gradient(
-    to right,
-    #343a40,
-    rgba(248, 249, 250, 0.085)
-  );
 }
 
 .btn--md {
@@ -137,18 +133,23 @@ body {
 
 @keyframes slide-bck-bottom {
   0% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
   }
   100% {
-    transform: scale(0.92, 0.92) translateY(30%);
+    transform: scale(0.95);
+    transform-origin: 50% 100%;
   }
 }
 
 @keyframes slide-fwd-top {
   0% {
-    transform: scale(0.92, 0.92) translateY(30%);
+    transform: scale(0.95);
+    transform-origin: 50% 100%;
   }
   100% {
-    transform: scale(1, 1) translateY(0);
+    transform: scale(1);
+    transform-origin: 50% 100%;
   }
 }
 
@@ -157,7 +158,7 @@ body {
 .header {
   width: 90vw;
   margin-top: 1rem;
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   /* background-color: white; */
   left: 50%;
@@ -191,6 +192,14 @@ body {
 }
 
 /* Header lines overlay */
+.overlay {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  pointer-events: none;
+}
 .lines-wrapper {
   display: flex;
   position: fixed;
@@ -224,7 +233,7 @@ body {
   /* color: black; */
   top: 50%;
   left: 50%;
-  z-index: 3;
+  /* z-index: 3; */
   list-style: none;
   display: grid;
   align-items: end;
@@ -306,8 +315,9 @@ body {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     242deg,
-    rgba(255, 255, 255, 0.022373915386467047) 30%,
-    rgba(0, 1, 1, 0.887920133873862) 100%
+    rgba(255, 255, 255, 0.022373915386467047) 10%,
+    rgba(0, 1, 1, 0.7) 85.1%,
+    rgba(0, 1, 1, 0.888) 100%
   );
   z-index: 1; /* Ensure the gradient is on top of the image */
   pointer-events: none; /* Allow clicks to pass through the gradient */
@@ -315,7 +325,7 @@ body {
 .hero-text-box {
   max-width: 30%;
   position: absolute;
-  bottom: 88%;
+  bottom: 70%;
   left: 5%;
   color: #f8f9fa;
   display: flex;
@@ -350,6 +360,10 @@ body {
 .filter-btn-wrapper {
   display: flex;
   gap: 1.6rem;
+}
+.filter-btn {
+  background-color: #212529;
+  color: white;
 }
 .gallery-heading {
   font-size: 2.4rem;
@@ -392,6 +406,7 @@ body {
   letter-spacing: -1px;
   color: #f8f9fa;
 }
+
 .cta-hero-text {
   font-size: 1.6rem;
   line-height: 1.8;
@@ -401,6 +416,11 @@ body {
 /* Sponsor Company Movies Carousel Section*/
 .company-movies-section {
   height: 100vh;
+  background-image: radial-gradient(
+    105.31% 96.44% at 50% 100.18%,
+    rgba(22, 27, 34, 0.64) 0%,
+    #161b22 100%
+  );
 }
 .movie-carousel {
   max-width: 925px;
@@ -475,11 +495,7 @@ body {
 /* Testimonials section */
 .testimonials-section {
   /* height: 100vh; */
-  background-image: radial-gradient(
-    105.31% 96.44% at 50% 100.18%,
-    rgba(22, 27, 34, 0.64) 0%,
-    #161b22 100%
-  );
+
   color: #8b949e;
   border-radius: 10px;
   padding: 4.8rem;

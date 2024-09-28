@@ -28,6 +28,7 @@
           width="24"
           class="header-logo"
         /> -->
+        <a href="about.html">About</a>
         <div class="menu-btn">
           <ion-icon name="menu-outline" class="menu-icon-open"></ion-icon>
           <!-- <ion-icon name="close-outline" class="menu-icon-close"></ion-icon> -->
@@ -35,49 +36,50 @@
       </div>
     </header>
 
-    <div class="lines-wrapper">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+    <div class="overlay">
+      <div class="lines-wrapper">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <menu class="menu">
+        <div class="main-menu">
+          <ul class="main-menu-list">
+            <div class="main-menu-item-wrapper">
+              <li class="main-menu-item">Work</li>
+            </div>
+            <div class="main-menu-item-wrapper">
+              <li class="main-menu-item">Studio</li>
+            </div>
+            <div class="main-menu-item-wrapper">
+              <li class="main-menu-item">Team</li>
+            </div>
+            <div class="main-menu-item-wrapper">
+              <li class="main-menu-item">Contact</li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="sub-menu">
+          <ul class="sub-menu-list">
+            <p class="sub-menu-heading">Socials</p>
+            <li class="sub-menu-item">LinkedIn</li>
+            <li class="sub-menu-item">Instagram</li>
+            <li class="sub-menu-item">Twitter</li>
+          </ul>
+        </div>
+      </menu>
     </div>
-
-    <menu class="menu">
-      <div class="main-menu">
-        <ul class="main-menu-list">
-          <div class="main-menu-item-wrapper">
-            <li class="main-menu-item">Work</li>
-          </div>
-          <div class="main-menu-item-wrapper">
-            <li class="main-menu-item">Studio</li>
-          </div>
-          <div class="main-menu-item-wrapper">
-            <li class="main-menu-item">Team</li>
-          </div>
-          <div class="main-menu-item-wrapper">
-            <li class="main-menu-item">Contact</li>
-          </div>
-        </ul>
-      </div>
-
-      <div class="sub-menu">
-        <ul class="sub-menu-list">
-          <p class="sub-menu-heading">Socials</p>
-          <li class="sub-menu-item">LinkedIn</li>
-          <li class="sub-menu-item">Instagram</li>
-          <li class="sub-menu-item">Twitter</li>
-        </ul>
-      </div>
-    </menu>
-
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -114,7 +116,7 @@
         </div>
       </section>
 
-      <section class="gallery-section container">
+      <section class="gallery-section container mb--xl">
         <h2 class="gallery-heading">Trending Shows</h2>
         <div class="movie-section mb--sm container">
           <img src="img/fightClub.png" alt="Movie Image" class="movie-img" />
@@ -135,233 +137,11 @@
         </div>
 
         <div class="filter-btn-wrapper">
-          <a href="#" class="filter-btn btn btn--md">Popular</a>
-          <a href="#" class="filter-btn btn btn--md">Comedy</a>
-          <a href="#" class="filter-btn btn btn--md">Action</a>
-          <a href="#" class="filter-btn btn btn--md">Romance</a>
-          <a href="#" class="filter-btn btn btn--md">Popular</a>
-        </div>
-      </section>
-
-      <section
-        class="cta-hero-section flex-center-col mb--xl"
-        role="img"
-        aria-placeholder="Call To Action Image containing multiple movies as borders"
-        aria-hidden="false"
-      >
-        <!-- <img
-          src="img/cta.png"
-          alt="Call To Action Image containing multiple movies as borders"
-          class="cta-hero-img"
-        /> -->
-        <div class="cta-text-box">
-          <h2 class="cta-hero-heading section-heading">
-            Your best shows are here.
-          </h2>
-          <p class="cta-hero-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
-            libero delectus deserunt, officiis porro magnam eos repellat veniam
-            suscipit maiores sequi numquam facilis voluptatum quia in? Nulla
-            quisquam itaque beatae.
-          </p>
-        </div>
-        <div class="btn-wrapper mt--sm">
-          <a href="#" class="btn btn--primary btn--large">Watch now &rarr;</a>
-          <a href="#" class="btn btn--secondary btn--large">Details</a>
-        </div>
-      </section>
-
-      <section class="company-movies-section flex-center-col">
-        <h2 class="company-movies-heading section-heading mb--sm">
-          Shows from our best
-        </h2>
-
-        <figure class="movie-carousel">
-          <!-- <img src="" alt="Image of movie from National Geographic" /> -->
-          <div class="carousel-item">
-            <video class="carousel-video" autoplay loop muted>
-              <source
-                src="video/5659532-sd_640_360_30fps.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <div class="carousel-item">
-            <video class="carousel-video" autoplay loop muted>
-              <source
-                src="video/4606793-sd_640_360_24fps.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- 
-          <button class="carousel-btn" id="carousel-btn-left">
-            <ion-icon
-              name="chevron-back-outline"
-              class="chevron-left"
-            ></ion-icon>
-          </button>
-
-          <button class="carousel-btn" id="carousel-btn-right">
-            <ion-icon
-              name="chevron-forward-outline"
-              class="chevron-right"
-            ></ion-icon>
-          </button> -->
-
-          <div class="dot-btn-wrapper mb--sm">
-            <button class="dot-btn"></button>
-            <button class="dot-btn"></button>
-            <button class="dot-btn"></button>
-            <button class="dot-btn"></button>
-          </div>
-        </figure>
-        <div class="movie-card-bottom-box">
-          <img src="" alt="National Geographic Logo" />
-        </div>
-      </section>
-
-      <section class="testimonials-section container flex-center-col mb--xl">
-        <h2 class="testimonials-heading section-heading mb--md">
-          Our customers are proud with us.
-        </h2>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis."
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/1.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis."
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/2.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis."
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/3.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis."
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/4.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star-half-outline" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis.
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/5.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
-          <div class="testimonial-wrapper">
-            <div class="stars-wrapper">
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star" class="star"></ion-icon>
-              <ion-icon name="star-outline" class="star"></ion-icon>
-            </div>
-            <blockquote class="testimonial-text">
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              molestias commodi deleniti ab impedit inventore perferendis."
-            </blockquote>
-            <div class="testimonial-person-wrapper">
-              <img
-                src="img/testimonials/6.jpg"
-                alt="Testimonial photo of a customer"
-                class="testimonial-photo"
-              />
-              <p class="testimonial-name">Name Surname</p>
-              <p class="testimonial-position">Position, Company Name</p>
-            </div>
-          </div>
+          <a href="#" class="filter-btn btn btn--secondary btn--md">Popular</a>
+          <a href="#" class="filter-btn btn btn--secondary btn--md">Comedy</a>
+          <a href="#" class="filter-btn btn btn--secondary btn--md">Action</a>
+          <a href="#" class="filter-btn btn btn--secondary btn--md">Romance</a>
+          <a href="#" class="filter-btn btn btn--secondary btn--md">Popular</a>
         </div>
       </section>
 
