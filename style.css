@@ -416,11 +416,6 @@ body {
 /* Sponsor Company Movies Carousel Section*/
 .company-movies-section {
   height: 100vh;
-  background-image: radial-gradient(
-    105.31% 96.44% at 50% 100.18%,
-    rgba(22, 27, 34, 0.64) 0%,
-    #161b22 100%
-  );
 }
 .movie-carousel {
   max-width: 925px;
@@ -512,6 +507,12 @@ body {
   padding: 3.2rem;
   border: 2px solid #f8f9fa6a;
   border-radius: 10px;
+  background-image: radial-gradient(
+    105.31% 96.44% at 50% 100.18%,
+    rgba(22, 27, 34, 0.64) 0%,
+    #161b22 100%
+  );
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 .stars-wrapper {
   margin-bottom: 2rem;
@@ -580,6 +581,7 @@ hr {
 .copyright {
   color: #f8f9fa6a;
 }
+
 /* Type Scale System
 Scale 0.5: 8 px (0.8 rem)
 

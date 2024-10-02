@@ -32,4 +32,4 @@ function showNext() {
 }
 
 // Set interval for automatic sliding
-setInterval(showNext, 3000); // Change every 3 seconds
+setInterval(showNext, 5000); // Change every 5 seconds
