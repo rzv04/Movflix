@@ -445,7 +445,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%;
+  width: calc(40% + 10rem);
   gap: 2.4rem;
 }
 .text-main-word {
@@ -453,7 +453,7 @@ body {
 }
 
 .cta-hero-heading {
-  font-size: 7.2rem;
+  /* font-size: 7.2rem; */
   line-height: 1.1;
   letter-spacing: -1px;
   color: #f8f9fa;
